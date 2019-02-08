@@ -100,6 +100,7 @@ a {
   .u-button {
     margin-right: $smallPadding;
     padding: 0.2rem;
+
   }
 }
 
@@ -110,12 +111,17 @@ a {
   right: 0;
   bottom: 0;
 
+
+  overflow-y: scroll;
+
+
   z-index: 1;
   padding: $smallPadding $smallPadding 0 $smallPadding;
   width: $buttonSidebarWidth;
   @include buttonBarBackground;
 
   .SceneOptionsHeader {
+
     display: inline-block;
     margin-top: 0;
     color: $black !important;
@@ -127,6 +133,11 @@ a {
   transition: opacity 500ms ease-in-out,
   left 500ms ease-in-out;
 }
+
+.u-button-sidebar::-webkit-scrollbar { 
+  display: none;  // Safari and Chrome
+}
+
 
 
 .u-button-sidebar:hover {
